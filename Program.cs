@@ -41,7 +41,6 @@ namespace LoggerEx
             }
             Console.ReadLine();
         }
-
     }
 
     public abstract class Database
@@ -100,43 +99,25 @@ namespace LoggerEx
     }
     public class SQLServer : Database
     {
-        //Logger logger = null;
-        //public SQLServer()
-        //{
-        //    logger = Logger.GetLogger();
-        //}
-
         protected override string GetDataBaseServerName()
         {
             return "Sql Server";
         }
         protected override void DoInsert()
         {
-            //100 code
             Console.WriteLine("Data Inserted into SQL Server");
-
         }
         protected override void DoUpdate()
         {
-            //100 code
             Console.WriteLine("Data Updated into SQL Server");
-
         }
         protected override void DoDelete()
         {
-            //100 code
             Console.WriteLine("Data Deleted from SQL Server");
-
         }
     }
     public class MySqlServer : Database
     {
-        //Logger logger = null;
-        //public MySqlServer()
-        //{
-        //    logger = Logger.GetLogger();
-        //}
-
         protected override string GetDataBaseServerName()
         {
             return "MySql Server";
@@ -158,29 +139,20 @@ namespace LoggerEx
     }
     public class OracleServer : Database
     {
-        //Logger logger = null;
-        //public OracleServer()
-        //{
-        //   logger = Logger.GetLogger();
-        //}
         protected override string GetDataBaseServerName()
         {
             return "Oracle Server";
         }
         protected override void DoInsert()
         {
-            //100code
             Console.WriteLine("Data Inserted into Oracle Server");
-
         }
         protected override void DoUpdate()
         {
-            //100code
             Console.WriteLine("Data Updated into Oracle Server");
         }
         protected override void DoDelete()
         {
-            //100code
             Console.WriteLine("Data Deleted from Oracle Server");
         }
     }
@@ -188,7 +160,6 @@ namespace LoggerEx
     public class Logger
     {
         private static Logger logger = new Logger();
-        // private static Logger logger1 =new Logger();
         private Logger()
         {
             // logger class realted initialization you can do it here...
